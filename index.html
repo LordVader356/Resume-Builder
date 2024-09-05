@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header{
+    background-image:url(https://cdn.sanity.io/images/mz2hls6g/production/bc1c6ad069d2d26a8606816f0ed4a7c9c12c02b7-1200x801.jpg?w=3840&q=75&fit=clip&auto=format);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#p1{
+  font-size: xx-large;  
+  font-weight: bold;
+  padding-top: 30px;
+}
+#p2{
+    padding-bottom:30px;;
+}
+#r{
+    border-radius: 3px;
+    color: white;
+    background-color: blue;
+      padding: 7px;
+}
+.t{
+  flex-wrap: wrap ;
+  width: 500px;
+  padding: 5px;
+}
+body{
+  flex-wrap: wrap ;
+  }
+
+
+            </style>
+    </head>
+    <body>
+         <header>
+    <center>   
+    <p id="p1" class="padding">Resume Builder</p>
+    <p  id="p2">Create your professional resume easily!</p>
+    </center>
+</header>
+    <input type="text" class="t"  placeholder="Enter Name:" id="i1"><br><br>
+    <input type="email" class="t" placeholder="Enter Email:"id="i2"><br><br>
+    <input type="number" class="t" placeholder="Enter Phone Number:"id="i3"><br><br>
+    <button  id="r" onclick="Generate()">Generate Resume</button><br><br>
+    <p id="output"></p><br><br><br><br><br>
+        <script>
+        function Generate(){
+            var name = document.getElementById("i1").value ;
+            var email = document.getElementById("i2").value ;
+            var pnumber = document.getElementById("i3").value ;
+            if (pnumber.length != 10) {
+                alert("Please Enter A Valid Phone Number!")
+            }
+            else if (pnumber.length = 10){
+                document.getElementById("output").innerHTML = "Your Resume"+"<br><br>"+"Name:"+ name +"<br><br>"+"Email:"+ email +"<br><br>"+"Phone Number:"+ pnumber +"<br><br>";
+            }
+ 
+        }
+        </script>
+       
+    </body>
+</html>
